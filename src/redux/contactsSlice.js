@@ -1,3 +1,4 @@
+import { combineReducers } from 'redux';
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchContacts } from './contactsOperation';
 
@@ -25,4 +26,20 @@ const contactsSlice = createSlice({
       });
   },
 });
-export const contactsReducer = contactsSlice.reducer;
+
+const filterSlice = createSlice({
+  name: 'filter',
+  initialState: '',
+  reducers: {
+    setFilter: (state, action) => {
+      return action.payload; 
+    },
+  },
+});
+
+const rootReducer = combineReducers({
+  contacts: contactsSlice.reducer,
+  filter: filterSlice.reducer,
+});
+export const { setFilter } = filterSlice.actions;
+export default rootReducer;
