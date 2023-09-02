@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContacts } from 'redux/contactsOperation';
+import { addContact } from 'redux/contactsOperation';
 import { getContacts } from 'redux/selectors';
 import css from './PhoneBook.module.css';
 
@@ -36,7 +36,7 @@ const PhoneBook = () => {
         phone,
       };
 
-      dispatch(addContacts(newContact));
+      dispatch(addContact(newContact));
       setName('');
       setPhone('');
     }
