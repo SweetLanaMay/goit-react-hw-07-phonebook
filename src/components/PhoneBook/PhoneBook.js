@@ -41,7 +41,7 @@ const PhoneBook = () => {
       setPhone('');
     }
   };
-  // console.log(contacts)
+
   return (
     <form className={css.phoneBookForm} onSubmit={handleFormSubmit}>
       <label className={css.formName}>

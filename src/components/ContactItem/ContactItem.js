@@ -10,12 +10,14 @@ const ContactItem = ({ contact }) => {
   const handleDeleteContact = () => dispatch(deleteContact(contact.id));
 
   return (
-    <p className={css.contactsItem}>
-      {contact.name}: {contact.phone}
+    <div className={css.contactWrap}>
+      <p className={css.contactsItem}>
+        {contact.name}: {contact.phone}
+      </p>
       <button className={css.deleteBtn} onClick={handleDeleteContact}>
         Delete
       </button>
-    </p>
+    </div>
   );
 };
 
