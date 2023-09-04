@@ -57,15 +57,16 @@ const filterSlice = createSlice({
   name: 'filter',
   initialState: '',
   reducers: {
-    setFilter: (state, action) => {
-      return action.payload;
-    },
+    setFilter: (state, action) =>  {
+    return action.payload
+    }
   },
 });
+export const { setFilter } = filterSlice.actions;
 
 const rootReducer = combineReducers({
   contacts: contactsSlice.reducer,
   filter: filterSlice.reducer,
 });
-export const { setFilter } = filterSlice.actions;
+
 export default rootReducer;

@@ -22,6 +22,7 @@ const App = () => {
       <h2 className={css.contactsTitle}>Contacts</h2>
       <Filter />
       {isLoading && !error && <b>Request in progress...</b>}
+   
     </div>
   );
 };
