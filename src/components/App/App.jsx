@@ -4,6 +4,7 @@ import { getContactsLoading, getContactsError } from 'redux/selectors';
 import { fetchContacts } from 'redux/contactsOperation';
 import PhoneBook from 'components/PhoneBook';
 import Filter from 'components/Filter';
+import ContactList from 'components/ContactList';
 import css from './App.module.css';
 
 const App = () => {
@@ -22,7 +23,7 @@ const App = () => {
       <h2 className={css.contactsTitle}>Contacts</h2>
       <Filter />
       {isLoading && !error && <b>Request in progress...</b>}
-   
+      <ContactList />
     </div>
   );
 };
